@@ -28,4 +28,3 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
           stylelint_input: '**/*.{css,scss,vue}'
-          level: warning
