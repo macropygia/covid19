@@ -16,11 +16,15 @@ jobs:
     steps:
       - name: Transifex
         if: github.actor == 'transifex-integration'
-        run: echo you are transifex
+        run: |
+          echo you are transifex
+          exit 0
       - name: macropygia
         if: github.actor == 'macropygia'
-        run: echo you are me!
-        run: exit 1
+        run: |
+          echo you are me!
+          exit 1
       - name: other
-        run: echo you are someone
-        run: exit 2
+        run: |
+          echo you are someone
+          exit 2
