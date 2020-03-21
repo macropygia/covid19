@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: actor
-        run: echo you are ${{ github.actor }}
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+        run: echo "$GITHUB_ACTOR"
 #      - name: Transifex
 #        if: github.actor == "transifex-integration"
 #        run: echo you are transifex
