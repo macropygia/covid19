@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: macropygia
         if: github.actor == 'macropygia'
-        run: exit 0
+        run: exit 1
