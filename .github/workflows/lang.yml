@@ -14,17 +14,6 @@ jobs:
     name: Language File Limitation
     runs-on: ubuntu-18.04
     steps:
-      - name: Transifex
-        if: github.actor == 'transifex-integration'
-        run: |
-          echo you are transifex
-          exit 0
       - name: macropygia
         if: github.actor == 'macropygia'
-        run: |
-          echo you are me!
-          exit 1
-      - name: other
-        run: |
-          echo you are someone
-          exit 2
+        run: exit 0
