@@ -14,12 +14,14 @@ jobs:
     name: Language File Limitation
     runs-on: ubuntu-18.04
     steps:
-      - name: Transifex
-        if: github.actor == "transifex-integration"
-        run: echo you are transifex
-      - name: Transifex
-        if: github.actor == "macropygia"
-        run: echo you are me!
-      - name: The others
-        if: github.actor == "transifex-integration"
-        run: echo you are someone
+      - name: actor
+         run: echo you are ${{ github.actor }}
+#      - name: Transifex
+#        if: github.actor == "transifex-integration"
+#        run: echo you are transifex
+#      - name: Transifex
+#        if: github.actor == "macropygia"
+#        run: echo you are me!
+#      - name: The others
+#        if: github.actor == "transifex-integration"
+#        run: echo you are someone
