@@ -14,16 +14,16 @@ jobs:
     name: Language File Limitation
     runs-on: ubuntu-18.04
     steps:
-      - name: actor
-        env:
-          GITHUB_ACTOR: ${{ github.actor }}
-        run: echo "$GITHUB_ACTOR"
-#      - name: Transifex
-#        if: github.actor == "transifex-integration"
-#        run: echo you are transifex
-#      - name: Transifex
-#        if: github.actor == "macropygia"
-#        run: echo you are me!
+#      - name: actor
+#        env:
+#          GITHUB_ACTOR: ${{ github.actor }}
+#        run: echo "$GITHUB_ACTOR"
+      - name: Transifex
+        if: github.actor == 'transifex-integration'
+        run: echo you are transifex
+      - name: macropygia
+        if: github.actor == 'macropygia'
+        run: echo you are me!
 #      - name: The others
 #        if: github.actor == "transifex-integration"
 #        run: echo you are someone
