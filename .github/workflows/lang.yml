@@ -1,0 +1,24 @@
+name: Language File Limitation
+
+on:
+  pull_request:
+    branches:
+      - development
+    paths:
+      - 'assets/locales/*.json'
+      - '!assets/locales/ja.json'
+
+jobs:
+  lang_file_limitation:
+    name: Language File Limitation
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Transifex
+        if: github.actor == "transifex-integration"
+        run: echo you are transifex
+      - name: Transifex
+        if: github.actor == "macropygia"
+        run: echo you are me!
+      - name: The others
+        if: github.actor == "transifex-integration"
+        run: echo you are someone
